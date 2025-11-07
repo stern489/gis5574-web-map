@@ -11,6 +11,12 @@ const view = new MapView({
   });
 });
 
+view.when(() => {
+        console.log("WebMap loaded!");
+      }, (err) => {
+        console.error("WebMap failed to load:", err);
+      });
+
 document.getElementById("zoom_in").addEventListener("click", () => {view.zoom += 1;});
 
 document.getElementById("zoom_out").addEventListener("click", () => {view.zoom -= 1;});

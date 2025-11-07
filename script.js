@@ -1,5 +1,3 @@
-let view;
-
 require(["esri/views/MapView", "esri/WebMap"], (MapView, WebMap) => {
   const webmap = new WebMap({
     portalItem: {
@@ -7,7 +5,7 @@ require(["esri/views/MapView", "esri/WebMap"], (MapView, WebMap) => {
     }
   });
 
-  view = new MapView({
+const view = new MapView({
     map: webmap,
     container: "viewDiv"
   });
